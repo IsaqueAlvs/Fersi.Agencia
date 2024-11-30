@@ -1,0 +1,137 @@
+/* Página de Portfólio */
+
+/* Cor e Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    background-color: #F5EFEB;
+    color: #2F4156;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-azul-escuro);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--cor-azul-intermediario);
+}
+
+/* Estilo dos Projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.projeto-item {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto-item img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.projeto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: var(--cor-azul-escuro);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--cor-azul-claro);
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .projeto-item {
+        padding: 15px;
+    }
+
+    .projeto-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-item {
+        padding: 10px;
+    }
+
+    .projeto-item h3 {
+        font-size: 1.2rem;
+    }
+}

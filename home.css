@@ -1,0 +1,38 @@
+/* Página Inicial - Home */
+
+/* Banner Principal */
+.banner {
+    background-image: url('../images/banner-home.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Seção de Serviços */
+.secao-servicos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.servico-item {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+}
+
+.servico-item h3 {
+    color: var(--cor-azul-escuro);
+}

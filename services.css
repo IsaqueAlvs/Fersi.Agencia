@@ -1,0 +1,90 @@
+/* Página de Serviços */
+
+/* Cor e Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    background-color: #F5EFEB;
+    color: #2F4156;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Lista de Serviços */
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.servico {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servico:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.servico h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: var(--cor-azul-escuro);
+    margin-bottom: 15px;
+}
+
+.servico p {
+    font-size: 1rem;
+    color: var(--cor-azul-intermediario);
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .lista-servicos {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .servico {
+        padding: 20px;
+    }
+
+    .servico h3 {
+        font-size: 1.5rem;
+    }
+
+    .servico p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .servico {
+        padding: 15px;
+    }
+
+    .servico h3 {
+        font-size: 1.3rem;
+    }
+
+    .servico p {
+        font-size: 0.9rem;
+    }
+}
