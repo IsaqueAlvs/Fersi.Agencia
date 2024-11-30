@@ -1,3 +1,4 @@
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +12,7 @@ body {
     color: #2F4156;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
+/* Definindo variáveis de cores */
 :root {
     --cor-fundo-claro: #F5EFEB;
     --cor-azul-escuro: #2F4156;
@@ -26,6 +23,13 @@ body {
     --preto: #333333;
 }
 
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header e Navegação */
 header nav {
     position: fixed;
     top: 0;
@@ -62,6 +66,7 @@ header nav ul {
     list-style: none;
 }
 
+/* Links do menu */
 header nav ul li {
     margin: 0 15px;
 }
@@ -78,6 +83,7 @@ header nav ul li a:hover {
     color: var(--cor-azul-claro);
 }
 
+/* Banner */
 .banner {
     background: url('banner.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -126,6 +132,7 @@ header nav ul li a:hover {
     color: var(--branco);
 }
 
+/* Seção de Serviços */
 .secao-servicos {
     display: flex;
     justify-content: space-around;
@@ -163,6 +170,7 @@ header nav ul li a:hover {
     line-height: 1.5;
 }
 
+/* Footer */
 footer {
     background-color: var(--cor-azul-escuro);
     color: var(--branco);
@@ -171,6 +179,7 @@ footer {
     font-size: 1rem;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
@@ -179,8 +188,33 @@ footer {
     }
 
     header nav ul {
+        display: none;
         flex-direction: column;
         margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Menu Hambúrguer */
+    header nav .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav .hamburger div {
+        width: 30px;
+        height: 4px;
+        background-color: var(--branco);
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
+    .menu-open ul {
+        display: flex;
     }
 
     .banner-content h1 {
